@@ -1,0 +1,44 @@
+NAME
+    RT-Extension-MailChimp - create mailchimp lists from non priviledged
+    users
+
+DESCRIPTION
+    This extension for RT adds the ability to export non priviledged RT
+    users into a MailChimp list. In addition it updates RT user customfields
+    with MailChimp subscriber attributes.
+
+RT VERSION
+    Works with RT 4.4
+
+INSTALLATION
+    perl Makefile.PL
+    make
+    make install
+        May need root permissions
+
+    Edit your /opt/rt4/etc/RT_SiteConfig.pm
+        Adding this line:
+
+            Plugin('RT::Extension::MailChimp');
+
+    Clear your mason cache
+            rm -rf /opt/rt4/var/mason_data/obj
+
+    Restart your webserver
+
+CONFIGURATION
+AUTHOR
+    Best Practical Solutions, LLC <modules@bestpractical.com>
+
+BUGS
+    All bugs should be reported via email to
+
+        Lmailto:bug-RT-Extension-CSVCustomFields@greenhills-it.co.uk>
+
+LICENSE AND COPYRIGHT
+    This software is Copyright (c) 2017 by Greenhills IT Ltd.
+
+    This is free software, licensed under:
+
+      The GNU General Public License, Version 2, June 1991
+
